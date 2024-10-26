@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .third{
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 400px;
+    text-align: center;
+    border: 1px solid black;
+    height: 700px;
+    width: 600px;
+    background-color: white;
+    font-family: arial;
+}
+.pre{
+    left:500px;
+    text-align: center;
+    color:rgb(4, 6, 2);
+    font-family: Arial, Helvetica, sans-serif;
+    height:50px;
+    width:500px;
+    color:#8ac926;
+}
+
+.charge{
+    border: 2px solid black;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color:#8ac926
+}
+
+.upi{
+    background-color:#4589ae;
+
+}
+
+    </style>
+</head>
+<style>
+    body{
+        background-image: url('https://wallpapercave.com/wp/wp8000721.jpg');
+    }
+</style>
+<body>
+    
+    <h1 class="pre">pre-book charging grid</h1><br><br>
+    <div class="third">
+        <h4>Vehicle type</h4>
+        <select name="vehicle" class="vehicle">
+
+            <option value="4w" >4 Wheeler</option>
+
+            <option value="2w">2 wheeler</option>
+
+            <option value="com">commercial </option>
+
+        </select><br><br>
+
+        <h4>Arriving time</h4>
+        <select name="time" class="time">
+
+            <option value="15"> 15 Min</option>
+
+            <option value="30"> 30 Min</option>
+
+            <option value="45"> 45 Min </option>
+
+            <option value="60"> 1 hr </option>
+
+            <option value="75"> 1 hr 15 min</option>
+
+            <option value="90"> 1 hr 30 min </option>
+            
+            <option value="105"> 1 hr 45 min</option>
+
+            <option value="120"> 2 hr</option>
+
+        </select><br><br>
+        <h4>Vehicle Number</h4>
+        <input type="text number" placeholder="Enter vehicle number"><br><br>
+         <div class="charge">
+            <h2>Booking charges</h2>
+            <p>1  - 30 min for 50Rs</p>
+            <p>30 - 1 hr for 100Rs</p>
+            <p>1  - 1 hr 30 min for 150Rs</p>
+            <p>1 hr 30 min - 2 hr  for 200Rs </p>
+        </div><br><br>
+        <button class="upi">pay with UPI</button><br><br>
+
+            <input type="number" placeholder="Enter UPI reference number">
+        
+    </div>
+</body>
+</html>

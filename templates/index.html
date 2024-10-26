@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Charging Station</title>
+    <link rel="icon" href="/static/images/OIP.ico">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<style>
+        /* Reset some default styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a4877; /* Light background */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar-menu li {
+            margin-left: 20px;
+        }
+
+        .navbar-menu a {
+            text-decoration: none;
+            color: #f0e9e9;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            background-color: #69cd26; /* Darker background on hover */
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #b4fba0;
+            margin: 4px 0;
+            transition: all 0.3s;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none; /* Hide the menu by default */
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px; /* Below the navbar */
+                left: 0;
+                background-color: #f8f9fa;
+            }
+
+            .navbar-menu.active {
+                display: flex; /* Show the menu when active */
+            }
+
+            .hamburger {
+                display: flex; /* Show hamburger icon on mobile */
+            }
+        }
+    </style>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Eco Charging Station</div>
+        <ul class="hamburger" id="hamburger" onclick="toggleMenu()"></ul>
+            <!-- <li><a href="/">Home</a></li>
+            <li><a href="#find-stations">Find Stations</a></li>
+            <li><a href="#book-slot">Book a Slot</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button>Login</button>
+            <button>Signup</button>
+        </div>
+    </nav> -->
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<ul class="navbar-menu" id="navbar-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="{{ url_for('findst') }}">Findst</a></li>
+    <li><a href="{{ url_for('bookslot') }}">Book a Slot</a></li>
+    <li><a href="{{ url_for('price') }}">Price</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+</ul>
+</nav>
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('navbar-menu');
+        menu.classList.toggle('active'); // Toggle the active class
+    }
+</script>
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('/static/images/bg-cityscape.jpg');">
+        <div class="overlay">
+            <h1>Locate and Charge Your EV with Ease</h1>
+            <p>Connecting you to the nearest EV charging station, anytime, anywhere.</p>
+            <div class="cta-buttons">
+                <button onclick="location.href='#find-stations'">Find Charging Stations</button>
+                <button onclick="location.href='#book-slot'">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <section class="marquee">
+        <marquee behavior="scroll" direction="left">New! Fast chargers now available in select locations. Book your slot today!></marquee>
+    </section>
+
+    <!-- Features Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <div class="why-choose-us">
+            <div class="why-item">
+                <img src="/static/images/icon-availability.png" alt="Real-Time Availability">
+                <h3>Real-Time Availability</h3>
+                <p>Live updates on station availability.</p>
+            </div>
+            <div class="why-item">
+                <img src="/static/images/icon-booking.png" alt="Easy Booking">
+                <h3>Easy Booking</h3>
+                <p>Reserve your slot in seconds.</p>
+            </div>
+            <div class="why-item">
+                <img src="/static/images/icon-pricing.png" alt="Flexible Pricing">
+                <h3>Flexible Pricing</h3>
+                <p>Choose the plan that works best for you.</p>
+            </div>
+            <div class="why-item">
+                <img src="/static/images/icon-ai.png" alt="AI-Powered Recommendations">
+                <h3>AI-Powered Recommendations</h3>
+                <p>Smart suggestions based on your location and history.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="find-stations">
+        <h2>Find Nearby Charging Stations</h2>
+        <!-- ***************** -->
+        <iframe src="https://map.openchargemap.io/?mode=embedded" allow="geolocation" frameborder="0" width="100%" height="500px"></iframe>
+        
+        
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script> -->
+        
+        
+    </section>
+    
+<!-- feedback -->
+<section>
+    <div class="feedback-form">
+        <h2>Leave Your Feedback</h2>
+        <form action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="f1737702-28fb-47df-a55c-2bec9d1ee02c">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+            <li><a href="{{ url_for('term') }}">Terms of Service</a></li>
+        </ul>
+        <p>Contact Us: support@chargingstation.com | +91 9964 567 890</p>
+    </footer>
+
+</body>
+</html>

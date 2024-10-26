@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Vehicles Price List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 60px;
+    background-color: #333;
+    color: #fff;
+    
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Main grid layout */
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Vehicle card styling */
+.vehicle-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: auto;
+}
+
+.brand-name {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.vehicle-card h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Price charge</h1>
+        <p>Explore the latest electric vehicles available in India and their prices.</p>
+    </header>
+    <main class="vehicle-grid">
+   
+         
+        <section class="vehicle-card">
+            
+            
+            <h1>4 - wheeler</h1>
+            <h3>Fast charging prices</h3>
+            <p class="price">₹5 per minute</p>
+        </section>
+        
+        <section class="vehicle-card">
+           
+           
+            <h1>4 - wheeler</h1>
+            <h3>Normal charging</h3>
+            <p class="price">₹2.5 per minute</p>
+        </section>
+        
+        <section class="vehicle-card">
+            
+            <h1>Commercial</h1>
+            <h3>Fast Charging prices</h3>
+            <p class="price">₹4 per minutes</p>
+        </section>
+        
+        <section class="vehicle-card">
+           
+            
+            <h1>Commercial</h1>
+            <h3>Normal charging price</h3>
+            <p class="price">₹2 per minute</p>
+        </section>
+        
+        <section class="vehicle-card">
+           
+            
+            <h1>2-wheeler</h1>
+            <h3>Fast charging price</h3>
+            <p class="price">₹3 per minutes</p>
+        </section>
+        
+        <section class="vehicle-card">
+          
+            
+            <h1>2-wheeler</h1>
+            <h3>Normal charging price</h3>
+            <p class="price">₹1.5 per minute</p>
+        </section>
+        <br>
+        
+       
+    </main>
+</body>
+</html>

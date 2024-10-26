@@ -1,0 +1,317 @@
+/* Reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1em;
+    color: white;
+}
+
+.menu, .auth-buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.menu li, .auth-buttons button {
+    color: white;
+    cursor: pointer;
+}
+
+.menu li:hover, .auth-buttons button:hover {
+    color: #28a745;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    color: rgb(79, 50, 225);
+}
+
+.overlay {
+    content: ""; /* Required to create the overlay */
+    position: absolute; /* Position it absolutely within the hero section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /*Semi-transparent black overlay */
+    z-index: 1;
+}
+.hero-content {
+    position: relative; /* Position relative to place text above the overlay */
+    z-index: 2; /* Place it above the overlay */
+    top: 10%; /* Push it down from the top */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center logos */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 2rem 0; /* Space between logos */
+}
+
+/* Logo Styles */
+.why-choose-us img {
+    max-width: 150px; /* Set max width for logos */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the logo fits well within the given space */
+    transition: transform 0.3s; /* Add a transition effect for hover */
+}
+
+/* Hover Effect */
+.why-choose-us img:hover {
+    transform: scale(1.1); /* Slightly scale up the logo on hover */
+}
+.why-item {
+    flex: 1 1 30%; /* Flexible size with a base of 30% for three items per row */
+    max-width: 300px; /* Maximum width for each item */
+    text-align: center; /* Center align text */
+    margin: 1rem; /* Margin between items */
+}
+
+/* Feature Image */
+.why-item img {
+    width: 100%; /* Make image take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Maximum height for consistency */
+    object-fit: contain; /* Ensure the image scales correctly without cropping */
+}
+
+/* Feature Text */
+.why-item h3 {
+    margin-top: 1rem; /* Spacing above the title */
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.why-item p {
+    font-size: 1rem; /* Adjust font size for description */
+    color: #555; /* Gray color for text */
+}
+
+
+/* Map Section */
+#map {
+    width: 100%;
+    height: 500px;
+    margin: 2em 0;
+}
+
+/* Footer */
+footer {
+    background-color: #5ac63e;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    
+}
+
+
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Light Theme Colors */
+:root {
+    --bg-color: #f9f9f9;
+    --primary-color: #4caf50;
+    --text-color: #333;
+    --accent-color: #4caf50;
+    --nav-bg: white;
+}
+
+/* Body Styling */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.menu-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('cityscape-with-ev.jpg'); /* Set background image */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-primary, .cta-secondary {
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.cta-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.cta-secondary {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.cta-primary:hover, .cta-secondary:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Marquee Section */
+.marquee {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-top: 2px solid var(--primary-color);
+}
+
+.marquee marquee {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+    }
+    .cta-primary, .cta-secondary {
+        width: 100%;
+    }
+}
+
+
+
+
+.feedback-form {
+    width: 60%; 
+    margin: 20px auto;
+    background-color: #08ea9bf5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form label {
+    font-weight: bold;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical; 
+}
+
+.feedback-form button {
+    background-color: #cb2222;
+    color: #eaf2f3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.feedback-form button:hover {
+    background-color: #555;
+}
